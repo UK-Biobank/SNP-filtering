@@ -8,7 +8,7 @@ This repo contains a JupyterLab notebook allowing individual SNPs to be filtered
 Follow the steps below to run this Jupyter Notebook:
 
 * Click on the Tools menu and select "JupiterLab"
-* Click on the "New JupyterLab" button to start a JupiterLab instance.
+* Click on the "New JupyterLab" button to start a JupyterLab instance.
 * Select a name and a project from the dropdown meny for your JupiterLab environment.
 * Select the priority for you JupyterLab environment; "Normal" of "High" is recommended.
 * Under "Cluster Configuration", select Single Node.
