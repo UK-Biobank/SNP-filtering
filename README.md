@@ -1,6 +1,6 @@
 # SNP filtering JupyterLab Notebook
 
-This repo contains a JupyterLab notebook allowing individual SNPs to be filtered from the UKB genotyping data.  A few approaches to filtering are provided, including options to filter by individual SNP rsIDs or by genomic regions of interest.
+This repo contains a JupyterLab notebook allowing individual SNPs to be filtered from the UKB genotyping data using the UK Biobank Research Analysis Platform on DNAnexus.  A few approaches to filtering are provided, including options to filter by individual SNP rsIDs or by genomic regions of interest.
 
 
 
