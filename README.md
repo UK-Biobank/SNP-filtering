@@ -1,8 +1,12 @@
 <!-- dx-header -->
 
-# Extract SNPs from genetic data (DNAnexus Platform App)
+# Extract SNPs from genetic data 
 
-This is the source code for an app that runs on the UK Biobank Research
+This repository provides tools for filtering individual SNPs from UK Biobank genotyping data using the UK Biobank Research Analysis Platform (UKB-RAP) on DNAnexus. It includes two methods: a DNAnexus applet and a Jupyter Notebook. Additional documentation is provided below.
+
+# 1. DNAnexus Platform App
+
+The **SNP_extract** folder includes the source code for an app that runs on the UK Biobank Research
 Analysis Platform (UKB-RAP). For more information about how to run or
 modify it, see <https://documentation.dnanexus.com/>. Documentation on
 building applets can be found in the DNAnexus documentation at
@@ -134,5 +138,27 @@ which have no access to the genetic data. Please ensure you have access
 to the genetic data in plink format (located in the Bulk folder) before
 using the app. If the app is terminated due to a runtime error, you will
 receive an email with an error code.
+
+# 2. Jupyter Notebook
+
+A JupyterLab notebook is included for filtering SNPs from UKB genotyping data via UKB-RAP on DNAnexus. You can find the notebook in the **SNP_extract_notebook** folder. 
+A few approaches to filtering are provided, including options to filter by individual SNP rsIDs or by genomic regions of interest.
+
+# How to run this notebook
+Follow the steps below to run this Jupyter Notebook:
+
+* Click on the Tools menu and select "JupyterLab"
+* Click on the "New JupyterLab" button to start a JupyterLab instance.
+* Select a name and a project from the dropdown meny for your JupyterLab environment.
+* Select the priority for you JupyterLab environment; "Normal" of "High" is recommended.
+* Under "Cluster Configuration", select Single Node.
+* Set instance type and duration for you environment.If the chromosomes where SNPs of interest are known in advance and a small number of chromosomes files are selected for download, an instance type with such as mem1_hdd1_v2_x8 or mem1_hdd1_v2_x4 should be sufficient. If all chromosome files are selected for download, instance type with more computational resources may be needed (mem1_hdd1_v2_x16 or above).
+* Click on "Start Environment"
+* You will see your environment go from "Initialising" to "Launching" and then "Ready". This may take some time depending on the priority selected; at busy times, it may be necessary to select high priority to avoid long initialising times. Once the environment is ready, click on "Open".
+* A JupyterLab session will open. On the left side of the screen, you will see a a "DNA Nexus" tab, allowing you to open notebooks directly from your project environment. If you have saved this notebook under you project environment, just double click to open it.
+* Install plink using the simple instructions at the top of the notebook.
+* Press "Ctrl" + "Enter" to run code cells. An hourglass icon on the JupyterLab tab in your browser indicates that the code is running. Please note that depending on number of chromosomes and SNPs and your instance type, code may take some time to run.
+
+
 
 
