@@ -1,0 +1,65 @@
+{
+  "name": "SNP_extract",
+  "title": "Extract SNPs from BED files",
+  "summary": "This app allows you to extract SNPs from the genotyping data via a file containing a list of rs identifiers or a list of genomic regions",
+  "dxapi": "1.0.0",
+  "version": "0.0.1",
+  "inputSpec": [
+    {
+      "name": "SNP_list",
+      "label": "A list of SNPs or genomic regions",
+      "class": "file",
+      "optional": false,
+      "patterns": [
+        "*"
+      ],
+      "help": ""
+    }
+  ],
+  "outputSpec": [
+    {
+      "name": "extracted_snps",
+      "label": "Participant-level genotypes for specified SNPs",
+      "class": "file",
+      "patterns": [
+        "*"
+      ],
+      "help": ""
+    }
+  ],
+  "runSpec": {
+    "timeoutPolicy": {
+      "*": {
+        "hours": 48
+      }
+    },
+   
+    "interpreter": "bash",
+    "release": "20.04",
+    "distribution": "Ubuntu",
+    "file": "src/SNP_extract.sh",
+
+    "execDepends": [
+      {
+        "name": "plink1.9",
+        "package_manager": "apt"
+      }
+    ],
+    "version": "0"
+  },
+  "access": {
+    "project": "CONTRIBUTE",
+    "network": [
+      "*"
+    ]
+  },
+  "regionalOptions": {
+    "aws:eu-west-2": {
+      "systemRequirements": {
+        "*": {
+          "instanceType": "mem1_ssd1_v2_x72"
+        }
+      }
+    }
+  }
+}
